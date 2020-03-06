@@ -5,4 +5,5 @@
  
 # Config
 | Config | Type | Description |
+| :-------------: | :---------: | :------ |
 | 173t_enabled | Bool | Enables the Plugin |
