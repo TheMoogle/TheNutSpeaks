@@ -4,16 +4,13 @@ namespace TheNutSpeaks
 {
     public class Plugin : EXILED.Plugin
     {
-        public static bool Enabled;
         public static int PatchCounter;
 
         public override void OnEnable()
         {
-            LoadConfigs();
+            // LoadConfigs();
 
-            if (!Enabled) return;
-
-            HarmonyInstance instance = HarmonyInstance.Create($"ur.mom.gay.thenutspeaks.{PatchCounter}");
+            HarmonyInstance instance = HarmonyInstance.Create($"com.themoogle.thenutspeaks.{PatchCounter}");
             instance.PatchAll();
         }
 
@@ -23,7 +20,8 @@ namespace TheNutSpeaks
 
         private void LoadConfigs()
         {
-            Enabled = Config.GetBool("173t_enabled", true);
+            // If you have this you dont need this if you have it installed
+            // Enabled = Config.GetBool("173t_enabled", true);
         }
 
         public override void OnReload()
